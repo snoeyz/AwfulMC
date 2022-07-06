@@ -1,6 +1,7 @@
 package com.snoeyz.awful_minecraft;
 
 import com.snoeyz.awful_minecraft.setup.ClientSetup;
+import com.snoeyz.awful_minecraft.setup.Config;
 import com.snoeyz.awful_minecraft.setup.ModSetup;
 import com.snoeyz.awful_minecraft.setup.Registration;
 import com.mojang.logging.LogUtils;
@@ -22,6 +23,7 @@ public class AwfulMinecraft {
         // Register the deferred registry
         ModSetup.setup();
         Registration.init();
+        Config.register();
 
         // Register the setup methods for modloading
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();

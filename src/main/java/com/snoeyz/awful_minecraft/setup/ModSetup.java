@@ -1,9 +1,6 @@
 package com.snoeyz.awful_minecraft.setup;
 
-import com.snoeyz.awful_minecraft.trolls.BoatCramTroll;
-import com.snoeyz.awful_minecraft.trolls.FakeCreeperTroll;
-import com.snoeyz.awful_minecraft.trolls.MobDeathShaderTroll;
-import com.snoeyz.awful_minecraft.trolls.WorldLoadTrolls;
+import com.snoeyz.awful_minecraft.trolls.*;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -27,6 +24,7 @@ public class ModSetup {
         bus.addListener(BoatCramTroll::onEntityMountingEvent);
         bus.addListener(WorldLoadTrolls::onLoadWorld);
         bus.addListener(MobDeathShaderTroll::onLivingDamage);
+        bus.addListener(PowderedSnowTroll::onPowderedSnowTroll);
     }
 
     public static void init(FMLCommonSetupEvent event) {
