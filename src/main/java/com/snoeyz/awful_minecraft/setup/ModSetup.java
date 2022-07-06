@@ -1,9 +1,9 @@
 package com.snoeyz.awful_minecraft.setup;
 
-import com.snoeyz.awful_minecraft.events.trolls.BoatCramTroll;
-import com.snoeyz.awful_minecraft.events.trolls.FakeCreeperTroll;
-import com.snoeyz.awful_minecraft.events.trolls.MobDeathShaderTroll;
-import com.snoeyz.awful_minecraft.events.trolls.WorldLoadTrolls;
+import com.snoeyz.awful_minecraft.trolls.BoatCramTroll;
+import com.snoeyz.awful_minecraft.trolls.FakeCreeperTroll;
+import com.snoeyz.awful_minecraft.trolls.MobDeathShaderTroll;
+import com.snoeyz.awful_minecraft.trolls.WorldLoadTrolls;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -30,5 +30,6 @@ public class ModSetup {
     }
 
     public static void init(FMLCommonSetupEvent event) {
+        Messages.register();
     }
 }

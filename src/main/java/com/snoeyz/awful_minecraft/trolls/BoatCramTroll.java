@@ -1,4 +1,4 @@
-package com.snoeyz.awful_minecraft.events.trolls;
+package com.snoeyz.awful_minecraft.trolls;
 
 import com.snoeyz.awful_minecraft.entities.TrollBoat;
 import net.minecraft.world.entity.vehicle.Boat;

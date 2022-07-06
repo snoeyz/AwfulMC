@@ -6,7 +6,6 @@ import com.snoeyz.awful_minecraft.entities.TrollBoat;
 import com.snoeyz.awful_minecraft.entities.TrollCreeper;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

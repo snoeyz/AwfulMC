@@ -1,8 +1,9 @@
-package com.snoeyz.awful_minecraft.events.trolls;
+package com.snoeyz.awful_minecraft.trolls;
 
+import com.snoeyz.awful_minecraft.network.PacketSyncShaderToClient;
+import com.snoeyz.awful_minecraft.setup.Messages;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.monster.Spider;
@@ -17,13 +18,12 @@ public class MobDeathShaderTroll {
         ) {
             Entity srcEntity = event.getSource().getEntity();
             ServerPlayer player = (ServerPlayer)event.getEntityLiving();
-            if (srcEntity instanceof Spider || srcEntity instanceof EnderMan) {
-                player.setCamera(srcEntity);
+            if (srcEntity instanceof Spider) {
+                Messages.sendToPlayer(new PacketSyncShaderToClient("minecraft", "shaders/post/spider.json"), player);
+            } else if (srcEntity instanceof EnderMan) {
+                Messages.sendToPlayer(new PacketSyncShaderToClient("minecraft", "shaders/post/invert.json"), player);
             } else if (srcEntity instanceof Creeper) {
-                Creeper shaderCreeper = EntityType.CREEPER.create(player.level);
-                shaderCreeper.setPos(srcEntity.position());
-                player.setCamera(shaderCreeper);
-                //shaderCreeper.remove(Entity.RemovalReason.DISCARDED);
+                Messages.sendToPlayer(new PacketSyncShaderToClient("minecraft", "shaders/post/creeper.json"), player);
             }
         }
     }

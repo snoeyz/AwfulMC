@@ -1,4 +1,4 @@
-package com.snoeyz.awful_minecraft.events.trolls;
+package com.snoeyz.awful_minecraft.trolls;
 
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.world.WorldEvent;
