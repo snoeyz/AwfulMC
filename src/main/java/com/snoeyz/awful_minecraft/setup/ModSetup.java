@@ -25,6 +25,8 @@ public class ModSetup {
         bus.addListener(WorldLoadTrolls::onLoadWorld);
         bus.addListener(MobDeathShaderTroll::onLivingDamage);
         bus.addListener(PowderedSnowTroll::onPowderedSnowTroll);
+        bus.addListener(NetherPortalTroll::onEntityTravelToDimension);
+        bus.addListener(NetherPortalTroll::onEntityPlaceBlock);
     }
 
     public static void init(FMLCommonSetupEvent event) {
